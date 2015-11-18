@@ -4,11 +4,11 @@
   <parent>
     <groupId>org.gbif.test</groupId>
     <artifactId>multi-mod-test</artifactId>
-      <version>1.1-SNAPSHOT</version>
+      <version>1.1</version>
   </parent>
 
     <artifactId>mod3</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
 
   <repositories>
     <repository>
