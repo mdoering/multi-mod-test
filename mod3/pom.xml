@@ -9,6 +9,14 @@
 
     <artifactId>mod3</artifactId>
     <version>1.1-SNAPSHOT</version>
+    <name>test module 3</name>
+
+    <distributionManagement>
+        <site>
+            <id>gh-pages</id>
+            <url>http://mdoering.github.io/${project.parent.artifactId}/${project.artifactId}/</url>
+        </site>
+    </distributionManagement>
 
   <repositories>
     <repository>
