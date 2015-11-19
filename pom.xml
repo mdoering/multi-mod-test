@@ -9,7 +9,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.6</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
@@ -19,7 +19,7 @@
     <connection>scm:git:git@github.com:mdoering/multi-mod-test.git</connection>
     <url>https://github.com/mdoering/multi-mod-test</url>
     <developerConnection>scm:git:git@github.com:mdoering/multi-mod-test.git</developerConnection>
-    <tag>multi-mod-test-1.2</tag>
+    <tag>multi-mod-test-1.6</tag>
   </scm>
 
     <distributionManagement>
@@ -59,9 +59,9 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.1</version>
         <configuration>
-          <goals>deploy</goals>
+          <goals>install deploy site site:stage</goals>
           <useReleaseProfile>true</useReleaseProfile>
-          <releaseProfiles>gbif-release,gh-pages</releaseProfiles>
+          <releaseProfiles>gbif-release</releaseProfiles>
         </configuration>
       </plugin>
     </plugins>
