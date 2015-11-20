@@ -3,7 +3,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.18-SNAPSHOT</version>
+  <version>1.17-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
