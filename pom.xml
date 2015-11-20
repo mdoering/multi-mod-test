@@ -4,12 +4,12 @@
   <parent>
     <groupId>org.gbif</groupId>
     <artifactId>motherpom</artifactId>
-    <version>31b</version>
+    <version>31c</version>
   </parent>
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.19-SNAPSHOT</version>
+  <version>1.21-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
