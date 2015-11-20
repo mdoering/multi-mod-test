@@ -3,7 +3,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.16</version>
+  <version>1.16-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
@@ -13,7 +13,7 @@
     <connection>scm:git:git@github.com:mdoering/multi-mod-test.git</connection>
     <url>https://github.com/mdoering/multi-mod-test</url>
     <developerConnection>scm:git:git@github.com:mdoering/multi-mod-test.git</developerConnection>
-    <tag>multi-mod-test-1.16</tag>
+    <tag>multi-mod-test-1.2</tag>
   </scm>
 
   <repositories>
@@ -349,9 +349,9 @@
           <configuration>
             <goals>deploy</goals>
             <resume>false</resume>
-            <preparationGoals>install site site:attach-descriptor site:stage scm-publish:publish-scm</preparationGoals>
+            <preparationGoals>install site site:stage scm-publish:publish-scm</preparationGoals>
             <useReleaseProfile>true</useReleaseProfile>
-            <releaseProfiles>gbif-release</releaseProfiles>
+            <releaseProfiles>gbif-release, publish-site</releaseProfiles>
           </configuration>
         </plugin>
       </plugins>
@@ -501,6 +501,20 @@
               <locales>en</locales>
               <skipDeploy>true</skipDeploy>
             </configuration>
+            <executions>
+              <execution>
+                <phase>site</phase>
+                <goals>
+                  <goal>stage</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>attach-descriptor</id>
+                <goals>
+                  <goal>attach-descriptor</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
