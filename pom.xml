@@ -355,11 +355,10 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>${maven-release-plugin.version}</version>
           <configuration>
-            <goals>deploy</goals>
+            <goals>install deploy site site:stage scm-publish:publish-scm</goals>
             <resume>false</resume>
-            <preparationGoals>install site site:stage scm-publish:publish-scm</preparationGoals>
             <useReleaseProfile>true</useReleaseProfile>
-            <releaseProfiles>gbif-release, publish-site</releaseProfiles>
+            <releaseProfiles>gbif-release</releaseProfiles>
           </configuration>
         </plugin>
       </plugins>
