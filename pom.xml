@@ -9,7 +9,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.22</version>
+  <version>1.23-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
@@ -19,7 +19,7 @@
     <connection>scm:git:git@github.com:mdoering/multi-mod-test.git</connection>
     <url>https://github.com/mdoering/multi-mod-test</url>
     <developerConnection>scm:git:git@github.com:mdoering/multi-mod-test.git</developerConnection>
-    <tag>multi-mod-test-1.22</tag>
+    <tag>multi-mod-test-1.2</tag>
   </scm>
 
   <repositories>
