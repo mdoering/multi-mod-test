@@ -266,6 +266,14 @@
               <version>${doxia-module-markdown.version}</version>
             </dependency>
           </dependencies>
+          <executions>
+            <execution>
+              <id>attach-descriptor</id>
+              <goals>
+                <goal>attach-descriptor</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -493,7 +501,6 @@
             </executions>
           </plugin>
 
-
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
@@ -508,12 +515,14 @@
                   <goal>stage</goal>
                 </goals>
               </execution>
+              <!--
               <execution>
                 <id>attach-descriptor</id>
                 <goals>
                   <goal>attach-descriptor</goal>
                 </goals>
               </execution>
+              -->
             </executions>
           </plugin>
           <plugin>
