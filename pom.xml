@@ -3,7 +3,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.17-SNAPSHOT</version>
+  <version>1.17</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
@@ -13,7 +13,7 @@
     <connection>scm:git:git@github.com:mdoering/multi-mod-test.git</connection>
     <url>https://github.com/mdoering/multi-mod-test</url>
     <developerConnection>scm:git:git@github.com:mdoering/multi-mod-test.git</developerConnection>
-    <tag>multi-mod-test-1.2</tag>
+    <tag>multi-mod-test-1.17</tag>
   </scm>
 
   <repositories>
@@ -356,7 +356,7 @@
           <version>${maven-release-plugin.version}</version>
           <configuration>
             <goals>deploy site site:stage scm-publish:publish-scm</goals>
-            <preparationGoals>instal</preparationGoals>
+            <preparationGoals>install</preparationGoals>
             <resume>false</resume>
             <useReleaseProfile>true</useReleaseProfile>
             <releaseProfiles>gbif-release</releaseProfiles>
