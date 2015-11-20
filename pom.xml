@@ -349,7 +349,7 @@
           <configuration>
             <goals>deploy</goals>
             <resume>false</resume>
-            <preparationGoals>site site:stage scm-publish:publish-scm</preparationGoals>
+            <preparationGoals>install site site:stage scm-publish:publish-scm</preparationGoals>
             <useReleaseProfile>true</useReleaseProfile>
             <releaseProfiles>gbif-release, publish-site</releaseProfiles>
           </configuration>
