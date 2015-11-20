@@ -356,7 +356,7 @@
           <version>${maven-release-plugin.version}</version>
           <configuration>
             <goals>deploy site site:stage scm-publish:publish-scm</goals>
-            <preparationGoals>instal</preparationGoals>
+            <preparationGoals>install</preparationGoals>
             <resume>false</resume>
             <useReleaseProfile>true</useReleaseProfile>
             <releaseProfiles>gbif-release</releaseProfiles>
