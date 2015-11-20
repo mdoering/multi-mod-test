@@ -408,19 +408,12 @@
           <linksource>true</linksource>
           <show>public</show>
           <aggregate>false</aggregate>
-          <!--
-          <links>
-              <link>http://freemarker.org/docs/api</link>
-              <link>http://docs.guava-libraries.googlecode.com/git/javadoc</link>
-              <link>http://findbugs.sourceforge.net/api</link>
-          </links>
-          -->
         </configuration>
+        <!--
         <reportSets>
           <reportSet>
             <id>non-aggregate</id>
             <configuration>
-              <!-- Specific configuration for the non aggregate report -->
             </configuration>
             <reports>
               <report>javadoc</report>
@@ -429,13 +422,13 @@
           <reportSet>
             <id>aggregate</id>
             <configuration>
-              <!-- Specific configuration for the aggregate report -->
             </configuration>
             <reports>
               <report>aggregate</report>
             </reports>
           </reportSet>
         </reportSets>
+        -->
       </plugin>
     </plugins>
   </reporting>
@@ -514,14 +507,12 @@
                   <goal>stage</goal>
                 </goals>
               </execution>
-              <!--
               <execution>
                 <id>attach-descriptor</id>
                 <goals>
                   <goal>attach-descriptor</goal>
                 </goals>
               </execution>
-              -->
             </executions>
           </plugin>
           <plugin>
@@ -615,59 +606,6 @@
                 </deployable>
               </deployables>
 
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-    <!-- profile to publish maven site to github pages. Execute via mvn -P gh-pages site-deploy-->
-    <profile>
-      <id>publish-site</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <configuration>
-              <locales>en</locales>
-              <skipDeploy>true</skipDeploy>
-            </configuration>
-            <executions>
-              <execution>
-                <phase>site</phase>
-                <goals>
-                  <goal>stage</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>attach-descriptor</id>
-                <goals>
-                  <goal>attach-descriptor</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-scm-publish-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>site-deploy</phase>
-                <goals>
-                  <goal>publish-scm</goal>
-                </goals>
-              </execution>
-            </executions>
-            <inherited>false</inherited>
-            <configuration>
-              <checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory>
-              <checkinComment>Publishing Site Docs for ${project.artifactId}:${project.version}</checkinComment>
-              <skipDeletedFiles>false</skipDeletedFiles>
-              <!-- publish to same git repo as code, just use a different branch -->
-              <pubScmUrl>${project.scm.connection}</pubScmUrl>
-              <!-- This is the git branch that the web "pages" are located in -->
-              <scmBranch>gh-pages</scmBranch>
             </configuration>
           </plugin>
         </plugins>
