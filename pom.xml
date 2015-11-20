@@ -349,7 +349,7 @@
           <configuration>
             <goals>deploy</goals>
             <useReleaseProfile>true</useReleaseProfile>
-            <releaseProfiles>gbif-release</releaseProfiles>
+            <releaseProfiles>gbif-release, publish-site</releaseProfiles>
           </configuration>
         </plugin>
       </plugins>
