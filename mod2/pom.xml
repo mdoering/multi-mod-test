@@ -4,12 +4,12 @@
   <parent>
     <groupId>org.gbif.test</groupId>
     <artifactId>multi-mod-test</artifactId>
-      <version>1.23-SNAPSHOT</version>
+      <version>1.22</version>
   </parent>
 
     <name>test module 2</name>
     <artifactId>mod2</artifactId>
-    <version>1.23-SNAPSHOT</version>
+    <version>1.22</version>
 
     <distributionManagement>
         <site>
