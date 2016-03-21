@@ -9,7 +9,7 @@
 
   <groupId>org.gbif.test</groupId>
   <artifactId>multi-mod-test</artifactId>
-  <version>1.26</version>
+  <version>1.27-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Multi module test</name>
